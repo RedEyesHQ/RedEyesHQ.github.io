@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash ~/.claude/scripts/init-project.sh)",
+      "Read(//c/Users/chang/SynologyDrive/projectMemories/**)",
+      "Read(//c/Users/chang/SynologyDrive/Clippings\" 2>/dev/**)",
+      "Read(//c/Users/chang/SynologyDrive/Clippings//**)",
+      "Read(//c/Users/chang/SynologyDrive/Clippings/**)",
+      "Bash(xargs grep *)",
+      "Bash(npx http-server *)",
+      "WebFetch(domain:localhost)",
+      "Bash(start index.html)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\chang\\SynologyDrive\\projectMemories\\RedEyesHQ.github.io"
+    ]
+  }
+}
