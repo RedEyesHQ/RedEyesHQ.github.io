@@ -5,7 +5,8 @@
     <meta name="google-site-verification" content="wqrZ74PkrUg6t9TIPGTFlnGOhgBjYLxxdGRn3Hg3N94"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RedEyes - 혁신적인 게임을 만드는 게임 개발 회사">
+    <meta name="description" content="RedEyes - 혁신적인 게임을 만드는 게임 개발 스튜디오">
+    <meta name="theme-color" content="#07070a">
     <title>RedEyes - Game Development Studio</title>
     <link rel="stylesheet" href="styles.css">
     <link
@@ -19,7 +20,9 @@
         <div class="container">
             <div class="nav-wrapper">
                 <div class="logo">
-                    <span class="logo-red">Red</span><span class="logo-eyes">Eyes</span>
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span class="logo-red">Red</span><span class="logo-eyes">Eyes</span>
+                    </a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="#home">Home</a></li>
@@ -40,20 +43,23 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background"></div>
+        <div class="hero-grid"></div>
         <div class="container">
             <div class="hero-content">
+                <span class="hero-eyebrow">Indie Game Studio · Est. 2025</span>
                 <h1 class="hero-title">
                     <span class="glitch" data-text="RedEyes">RedEyes</span>
                 </h1>
                 <p class="hero-subtitle">게임의 미래를 만들어갑니다</p>
                 <p class="hero-description">혁신적인 아이디어와 최첨단 기술로 플레이어들에게 잊지 못할 경험을 선사합니다</p>
                 <div class="hero-buttons">
-                    <a href="#games" class="btn btn-primary">게임 보기</a>
+                    <a href="#games" class="btn btn-primary">게임 보기 <span class="btn-arrow">→</span></a>
                     <a href="#contact" class="btn btn-secondary">문의하기</a>
                 </div>
             </div>
         </div>
         <div class="scroll-indicator">
+            <span>Scroll</span>
             <div class="mouse"></div>
         </div>
     </section>
@@ -61,7 +67,8 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Us</h2>
+            <span class="section-eyebrow">About</span>
+            <h2 class="section-title">Who We Are</h2>
             <div class="about-content">
                 <div class="about-text">
                     <h3>우리는 RedEyes입니다</h3>
@@ -77,19 +84,39 @@
                             <div class="stat-number">2+</div>
                             <div class="stat-label">팀 멤버</div>
                         </div>
-                        <!-- <div class="stat-item">
-                            <div class="stat-number">0+</div>
-                            <div class="stat-label">총 다운로드수</div>
-                        </div> -->
+                        <div class="stat-item">
+                            <div class="stat-number">2025</div>
+                            <div class="stat-label">Founded</div>
+                        </div>
                     </div>
                 </div>
                 <div class="about-image">
-                    <div class="image-placeholder">
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="100" cy="100" r="80" fill="#ff0033" opacity="0.2" />
-                            <circle cx="100" cy="100" r="60" fill="#ff0033" opacity="0.4" />
-                            <circle cx="100" cy="100" r="40" fill="#ff0033" opacity="0.6" />
-                            <circle cx="100" cy="100" r="20" fill="#ff0033" />
+                    <div class="eye-emblem">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <defs>
+                                <radialGradient id="iris" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%"  stop-color="#ff3554"/>
+                                    <stop offset="55%" stop-color="#e21a3b"/>
+                                    <stop offset="100%" stop-color="#3a0a14"/>
+                                </radialGradient>
+                                <radialGradient id="pupil" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%"  stop-color="#0a0a0a"/>
+                                    <stop offset="100%" stop-color="#000"/>
+                                </radialGradient>
+                            </defs>
+                            <!-- Outer eye shape -->
+                            <path d="M20 100 Q100 20 180 100 Q100 180 20 100 Z"
+                                  fill="none" stroke="#e21a3b" stroke-width="1.5" opacity="0.5"/>
+                            <!-- Iris -->
+                            <circle cx="100" cy="100" r="55" fill="url(#iris)"/>
+                            <!-- Iris detail rings -->
+                            <circle cx="100" cy="100" r="55" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+                            <circle cx="100" cy="100" r="42" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/>
+                            <!-- Pupil -->
+                            <circle cx="100" cy="100" r="22" fill="url(#pupil)"/>
+                            <!-- Highlight -->
+                            <circle cx="92" cy="92" r="5" fill="#ffffff" opacity="0.85"/>
+                            <circle cx="110" cy="108" r="2" fill="#ffffff" opacity="0.4"/>
                         </svg>
                     </div>
                 </div>
@@ -100,18 +127,21 @@
     <!-- Games Section -->
     <section id="games" class="games">
         <div class="container">
+            <span class="section-eyebrow">Portfolio</span>
             <h2 class="section-title">Our Games</h2>
+            <p class="section-description">다양한 장르를 넘나들며 플레이어들에게 새로운 재미를 선사합니다</p>
             <div class="games-grid">
                 <div class="game-card">
                     <div class="game-image">
                         <img src="images/games/TrainDefense.png" alt="TrainDefense 아이콘">
                         <div class="game-overlay">
                             <h3>Train Defense</h3>
-                            <p>핵앤슬래시</p>
-                            <a href="traindefense.html" class="game-link">자세히 보기</a>
+                            <p>달리는 기차 위에서 펼쳐지는 전투</p>
+                            <a href="traindefense.html" class="game-link">자세히 보기 →</a>
                         </div>
                     </div>
                     <div class="game-info">
+                        <span class="game-genre">Hack &amp; Slash</span>
                         <h4>Train Defense</h4>
                         <p>기차를 타고 적을 쓸어 담는 핵앤슬래시 게임</p>
                     </div>
@@ -120,14 +150,15 @@
                     <div class="game-image">
                         <img src="images/games/BlockPuzzle.png" alt="BlockPuzzle 아이콘">
                         <div class="game-overlay">
-                            <h3>BlockPuzzle(Puzzle)</h3>
-                            <p>캐주얼</p>
-                            <a href="blockpuzzle.html" class="game-link">자세히 보기</a>
+                            <h3>BlockPuzzle</h3>
+                            <p>간단하지만 중독적인 퍼즐</p>
+                            <a href="blockpuzzle.html" class="game-link">자세히 보기 →</a>
                         </div>
                     </div>
                     <div class="game-info">
+                        <span class="game-genre">Casual · Puzzle</span>
                         <h4>BlockPuzzle</h4>
-                        <p>캐주얼 퍼즐 게임</p>
+                        <p>머리를 식히며 즐기는 캐주얼 퍼즐 게임</p>
                     </div>
                 </div>
                 <div class="game-card">
@@ -135,13 +166,14 @@
                         <img src="images/games/IceCreamStacking.png" alt="IceCreamStacking 아이콘">
                         <div class="game-overlay">
                             <h3>IceCream Stacking</h3>
-                            <p>캐주얼</p>
-                            <a href="icecreamstacking.html" class="game-link">자세히 보기</a>
+                            <p>아이스크림을 얼마나 높이 쌓을 수 있을까?</p>
+                            <a href="icecreamstacking.html" class="game-link">자세히 보기 →</a>
                         </div>
                     </div>
                     <div class="game-info">
+                        <span class="game-genre">Casual · Stacking</span>
                         <h4>IceCream Stacking</h4>
-                        <p>캐주얼 스택 게임</p>
+                        <p>아슬아슬한 균형감이 매력인 캐주얼 스택 게임</p>
                     </div>
                 </div>
             </div>
@@ -151,26 +183,27 @@
     <!-- Team Section -->
     <section id="team" class="team">
         <div class="container">
+            <span class="section-eyebrow">Team</span>
             <h2 class="section-title">Our Team</h2>
             <p class="section-description">열정적인 전문가들이 모여 최고의 게임을 만듭니다</p>
             <div class="team-grid">
                 <div class="team-member">
-                    <div class="member-avatar"></div>
+                    <div class="member-avatar" data-initial="SH">SH</div>
                     <h4>송현익</h4>
-                    <p class="member-role">CEO & Game Director</p>
+                    <p class="member-role">CEO &amp; Game Director</p>
                 </div>
                 <div class="team-member">
-                    <div class="member-avatar"></div>
+                    <div class="member-avatar" data-initial="CU">CU</div>
                     <h4>Cumic</h4>
                     <p class="member-role">Lead Developer</p>
                 </div>
                 <div class="team-member">
-                    <div class="member-avatar"></div>
+                    <div class="member-avatar" data-initial="?">?</div>
                     <h4>Null</h4>
                     <p class="member-role">Art Director</p>
                 </div>
                 <div class="team-member">
-                    <div class="member-avatar"></div>
+                    <div class="member-avatar" data-initial="?">?</div>
                     <h4>Null</h4>
                     <p class="member-role">Sound Designer</p>
                 </div>
@@ -181,33 +214,30 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
+            <span class="section-eyebrow">Contact</span>
+            <h2 class="section-title">Get In Touch</h2>
             <p class="section-description">함께 게임의 미래를 만들어갈 준비가 되셨나요?</p>
             <div class="contact-content">
-                <!-- <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="이름" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="이메일" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" placeholder="제목" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" rows="5" placeholder="메시지를 입력하세요" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">메시지 보내기</button>
-                </form> -->
                 <div class="contact-info">
                     <div class="info-item">
-                        <h4>📧 이메일</h4>
-                        <p>redeyeshq@gmail.com</p>
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <h4>Email</h4>
+                        <a href="mailto:redeyeshq@gmail.com">redeyeshq@gmail.com</a>
                     </div>
-                    <!-- <div class="info-item">
-                        <h4>📞 전화</h4>
-                        <p>+82 2-1234-5678</p>
-                    </div> -->
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/RedEyesHQ" target="_blank" rel="noopener">github.com/RedEyesHQ</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -220,7 +250,8 @@
                 <div class="footer-logo">
                     <span class="logo-red">Red</span><span class="logo-eyes">Eyes</span>
                 </div>
-                <p>&copy; 2025 RedEyes All rights reserved.</p>
+                <p class="footer-tagline">Crafted with passion · Made in Korea</p>
+                <p>&copy; 2025 RedEyes. All rights reserved.</p>
             </div>
         </div>
     </footer>
